@@ -5,7 +5,7 @@ public class ZodiacSignFinder {
     public static void main(String[] args) {
 
         int birthDay;
-        String birthMonth;
+        String birthMonth, zodiacSign = "";
         Scanner i = new Scanner(System.in);
 
         System.out.print("Enter the day you were born: ");
@@ -15,32 +15,33 @@ public class ZodiacSignFinder {
 
         if (birthDay >= 1 && birthDay <= 31) {
             if (birthMonth.equals("march") && birthDay >= 21 || birthMonth.equals("april") && birthDay <= 20) {
-                System.out.println("Aries");
+                zodiacSign = "Aries";
             } else if (birthMonth.equals("april") || birthMonth.equals("may") && birthDay <= 20) {
-                System.out.println("Taurus");
+                zodiacSign = "Taurus";
             } else if (birthMonth.equals("may") || birthMonth.equals("june") && birthDay <= 20) {
-                System.out.println("Gemini");
+                zodiacSign = "Gemini";
             } else if (birthMonth.equals("june") || birthMonth.equals("july") && birthDay <= 22) {
-                System.out.println("Cancer");
+               zodiacSign = "Cancer";
             } else if (birthMonth.equals("july") || birthMonth.equals("august") && birthDay <= 22) {
-                System.out.println("Leo");
+                zodiacSign = "Leo";
             } else if (birthMonth.equals("august") || birthMonth.equals("september") && birthDay <= 22) {
-                System.out.println("Virgo");
+                zodiacSign = "Virgo";
             } else if (birthMonth.equals("september") || birthMonth.equals("october") && birthDay <= 22) {
-                System.out.println("Libra");
+                zodiacSign = "Libra";
             } else if (birthMonth.equals("october") || birthMonth.equals("november") && birthDay <= 22) {
-                System.out.println("Scorpio");
+                zodiacSign = "Scorpio";
             } else if (birthMonth.equals("november") || birthMonth.equals("december") && birthDay <= 21) {
-                System.out.println("Sagittarius");
+                zodiacSign = "Sagittarius";
             } else if (birthMonth.equals("december") || birthMonth.equals("january") && birthDay <= 19) {
-                System.out.println("Capricorn");
+                zodiacSign = "Capricorn";
             } else if (birthMonth.equals("january") || birthMonth.equals("february") && birthDay <= 19) {
-                System.out.println("Aquarius");
+                zodiacSign = "Aquarius";
             } else if (birthMonth.equals("february") || birthMonth.equals("march") && birthDay <= 20) {
-                System.out.println("Pisces");
+                zodiacSign = "Pisces";
             }
         } else {
             System.out.println("Invalid birth day or birth month! ");
         }
+        System.out.println("Zodiac Sign: " + zodiacSign);
     }
 }
