@@ -15,7 +15,7 @@ public class EvenNumbersFinder {
 //        }
 
         // Additional Practice
-        // A program that finds the average of the numbers if the number is divisible by 12 (3 and 4) given maximum range starting from 0.
+        // A program that finds the average of the numbers if the number is divisible by 12 (3 and 4) given maximum range starting from 1.
         int sum = 0, counter = 0;
         System.out.print("Enter the maximum range: ");
         number = input.nextInt();
