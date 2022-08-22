@@ -18,6 +18,8 @@ public class RecursivePowerCalculator {
         x = scan.nextInt();
         System.out.print("Exponent: ");
         y = scan.nextInt();
-        System.out.println("Power(" + x + "," + y + ") = " + power(x,y));
+
+        if (x < 0 || y < 0) System.out.println("The numbers you enter must be >= 0!");
+        else System.out.println("Power(" + x + "," + y + ") = " + power(x,y));
     }
 }
