@@ -11,12 +11,12 @@ public class Employee {
         this.fullName = fullName;
         this.salary = (salary > 0) ? salary : 0;
         this.workHours = (workHours > 0) ? workHours : 0;
-        this.hireYear = (hireYear <= 2021) ? hireYear : 0;
+        this.hireYear = (hireYear >= 1921 && hireYear <= 2021) ? hireYear : 0;
         System.out.println(toString());
     }
 
     public double tax() {
-        return (this.salary > 1000) ? this.salary * 0.03 : this.salary;
+        return (this.salary > 1000) ? this.salary * 0.03 : 0;
     }
 
     public double bonus() {
@@ -25,14 +25,18 @@ public class Employee {
     }
 
     public double salaryRaise() {
-        double raise;
-        int lengthOfService = 2021 - this.hireYear;
-        if (lengthOfService < 10) {
-           raise = this.salary * 0.05;
-        } else if(lengthOfService < 20) {
-            raise = this.salary * 0.10;
+        double raise = 0;
+        if (hireYear == 0) {
+            return raise;
         } else {
-            raise = this.salary * 0.15;
+            int lengthOfService = 2021 - this.hireYear;
+            if (lengthOfService < 10) {
+                raise = this.salary * 0.05;
+            } else if(lengthOfService < 20) {
+                raise = this.salary * 0.10;
+            } else {
+                raise = this.salary * 0.15;
+            }
         }
         return raise;
     }
