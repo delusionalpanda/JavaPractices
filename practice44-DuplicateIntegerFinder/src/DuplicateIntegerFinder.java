@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class DuplicateIntegerFinder {
     public static void main(String[] args) {
-        int[] list = {2, 7, 16, 3, 2, 16, 2, 21, 1, 2, 9, 1,21};
+        int[] list = {2, 0, 16, 3, 2, 16, 2, 21, 1, 2, 0, 1,21};
         int[] duplicatedElements = new int[list.length/2];
         int index = 0;
         for (int i = 0; i < list.length; i++){
